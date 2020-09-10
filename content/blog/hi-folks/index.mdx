@@ -1,108 +1,50 @@
 ---
-title: New Beginnings
-date: "2015-05-28T22:40:32.169Z"
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+title: React Native Starter Scaffolding
+date: "2020-09-10T09:30:00.169Z"
+description: This is a short explanation of the goals and decisions taken during the creation of a scaffolding fir React Native apps.
 ---
 
-Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-right at the coast of the Semantics, a large language ocean. A small river named
-Duden flows by their place and supplies it with the necessary regelialia.
+The main goal for this repo is to prepare a base environment to create applications with [Expo](https://expo.io/),
+do you still don’t know what Expo is? As its website clearly states Expo is a set of tools and services
+built around React Native and native platforms that help you develop, build, deploy, and quickly iterate on iOS,
+Android, and web apps from the same JavaScript/TypeScript codebase.
 
-## On deer horse aboard tritely yikes and much
+## Managed vs Bare
 
-The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.
+The first decision when you create an Expo project is choosing between Expo Managed and Bare Workflow, this scaffolding
+goes for the first, basically because I only want to write Javascript or Typescript and give back all the complexity of
+dealing with the native side to Expo. It is true that this decision will impose some limitations but I could live with
+them for the moment.
 
-- This however showed weasel
-- Well uncritical so misled
-  - this is very interesting
-- Goodness much until that fluid owl
+## TypeScript
 
-When she reached the first hills of the **Italic Mountains**, she had a last
-view back on the skyline of her hometown _Bookmarksgrove_, the headline of
-[Alphabet Village](http://google.com) and the subline of her own road, the Line
-Lane. Pityful a rethoric question ran over her cheek, then she continued her
-way. On her way she met a copy.
+Using javascript or typescript is another decision we have to take during the initialization. And I’ll take Typescript
+mainly because it will make my code easier to understand, giving me a clearer interface for my components and functions.
+And on top of that it will be more difficult to introduce the kind of stupid bugs I use to do, basically because the
+compiler won’t let me introduce them.
 
-### Overlaid the jeepers uselessly much excluding
+## Static Testing
 
-But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with
-[Longe and Parole](http://google.com) and dragged her into their agency, where
-they abused her for their projects again and again. And if she hasn’t been
-rewritten, then they are still using her.
+Typescript could also be included in this paragraph dedicated to the tools that will help us catch errors while we write code.
+A part of Typescript I will add a configuration to use [prettier](https://prettier.io/) and its extension for VSCode. Prettier is a code formatter and
+you will discover soon that formatting sometimes brings to light mistakes on the code. Besides that, the major tool for static
+testing is [ESLint](https://eslint.org/). ESLint lets you set a set of rules which analyze statically the code you write and warn you about potential errors.
+For this Scaffolding I’ve decided to extend the following sets of rules.
 
-> Far far away, behind the word mountains, far from the countries Vokalia and
-> Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-> right at the coast of the Semantics, a large language ocean.
+```javascript
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
 
-It is a paradisematic country, in which roasted parts of sentences fly into your
-mouth. Even the all-powerful Pointing has no control about the blind texts it is
-an almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar.
+```
 
-### According a funnily until pre-set or arrogant well cheerful
+And there is more, I have linked this ESLint configuration with the VSCode ESLint extension and the same editor is warning me about the issues as
+soon as I introduce them. Finally using [husky](https://github.com/typicode/husky#readme) and [lint-staged](https://github.com/okonet/lint-staged#readme) I am able to run my
+ESLint rules on the staged code I want to commit and stop the action in case some issue is found.
 
-The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.
+## React testing library
 
-1.  So baboon this
-2.  Mounted militant weasel gregariously admonishingly straightly hey
-3.  Dear foresaw hungry and much some overhung
-4.  Rash opossum less because less some amid besides yikes jeepers frenetic
-    impassive fruitlessly shut
-
-When she reached the first hills of the Italic Mountains, she had a last view
-back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
-Village and the subline of her own road, the Line Lane. Pityful a rethoric
-question ran over her cheek, then she continued her way. On her way she met a
-copy.
-
-> The copy warned the Little Blind Text, that where it came from it would have
-> been rewritten a thousand times and everything that was left from its origin
-> would be the word "and" and the Little Blind Text should turn around and
-> return to its own, safe country.
-
-But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with Longe and Parole
-and dragged her into their agency, where they abused her for their projects
-again and again. And if she hasn’t been rewritten, then they are still using
-her. Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts.
-
-#### Silent delightfully including because before one up barring chameleon
-
-Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-large language ocean. A small river named Duden flows by their place and
-supplies it with the necessary regelialia. It is a paradisematic country, in
-which roasted parts of sentences fly into your mouth.
-
-Even the all-powerful Pointing has no control about the blind texts it is an
-almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
-advised her not to do so, because there were thousands of bad Commas, wild
-Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.
-
-##### Wherever far wow thus a squirrel raccoon jeez jaguar this from along
-
-She packed her seven versalia, put her initial into the belt and made herself on
-the way. When she reached the first hills of the Italic Mountains, she had a
-last view back on the skyline of her hometown Bookmarksgrove, the headline of
-Alphabet Village and the subline of her own road, the Line Lane. Pityful a
-rethoric question ran over her cheek, then she continued her way. On her way she
-met a copy.
-
-###### Slapped cozy a that lightheartedly and far
-
-The copy warned the Little Blind Text, that where it came from it would have
-been rewritten a thousand times and everything that was left from its origin
-would be the word "and" and the Little Blind Text should turn around and return
-to its own, safe country. But nothing the copy said could convince her and so it
-didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
-with Longe and Parole and dragged her into their agency, where they abused her
-for their projects again and again.
+Finally no project is complete with a proper set of integration tests. In order to do that this Scaffolding is going to use [Jest](https://jestjs.io/en/) and
+the [React Native Testing Library](https://callstack.github.io/react-native-testing-library/), this library takes out the best of Jest making easy to write tests much more similar to the way a real
+user will be interacting with your app, avoiding testing implementation details which turn refactorings in a eternal nightmare of failing tests.
