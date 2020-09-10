@@ -6,7 +6,7 @@ module.exports = {
     description: `Posts about development decisions fighting against being forgotten.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `gatsbyjs`,
+      twitter: `sinplanbsoft`,
     },
   },
   plugins: [
