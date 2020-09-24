@@ -13,8 +13,8 @@ do you still don’t know what Expo is? As its website clearly states:
 
 ## Managed vs Bare
 
-The first decision when you create an Expo project is choosing between Expo Managed and Bare Workflow, this scaffolding
-goes for the first, basically because I only want to write Javascript or Typescript and give back all the complexity of
+The first decision you have to take during the Expo project creation is choosing between Expo Managed and Bare Workflow, this scaffolding
+went for the first, basically because I only want to write Javascript or Typescript and give back all the complexity of
 dealing with the native side to Expo. It is true that this decision will impose some limitations but I could live with
 them for the moment.
 
@@ -27,9 +27,9 @@ compiler won’t let me introduce them.
 
 ## Static Testing
 
-Typescript could also be included in this paragraph dedicated to the tools that will help us catch errors while we write code.
+Typescript could also be included in this paragraph dedicated to the tools that will help us catching errors while we write code.
 A part of Typescript I will add a configuration to use [prettier](https://prettier.io/) and its extension for VSCode. Prettier is a code formatter and
-you will discover soon that formatting sometimes brings to light mistakes on the code. Besides that, the major tool for static
+you will soon discover that formatting sometimes brings to light some mistakes on the code. Besides that, the major tool for static
 testing is [ESLint](https://eslint.org/). ESLint lets you set a set of rules which analyze statically the code you write and warn you about potential errors.
 For this Scaffolding I’ve decided to extend the following sets of rules.
 
@@ -46,6 +46,6 @@ ESLint rules on the staged code I want to commit and stop the action in case som
 
 ## React testing library
 
-Finally no project is complete with a proper set of integration tests. In order to do that this Scaffolding is going to use [Jest](https://jestjs.io/en/) and
+Finally no project is complete with a proper set of integration tests. In order to do that this repo is going to use [Jest](https://jestjs.io/en/) and
 the [React Native Testing Library](https://callstack.github.io/react-native-testing-library/), this library takes out the best of Jest making easy to write tests much more similar to the way a real
 user will be interacting with your app, avoiding testing implementation details which turn refactorings in a eternal nightmare of failing tests.
